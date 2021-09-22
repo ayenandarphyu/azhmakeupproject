@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+:root{
+	--hover-color:#e82563;
+	--navbar-color:rgba(235,122,127,1.00);
+	--bg-color:#ffdeee;
+}
+
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+/*Start Header Section*/
+header{
+	height: 100vh;
+
+	background:linear-gradient(
+		rgba(179,120,127,0.2),
+		rgba(0,0,0,0.3)
+
+		) , url('../assets/img/gallery/cover.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	position: relative;
+}
+
+/*Start Navbar*/
+.navbar{
+	background:rgba(235,122,127,0);
+	border-bottom-left-radius: 150px;
+	border-bottom-right-radius: 150px;
+	padding: 30px;
+	
+	transition: all 0.7s;
+}
+
+.navmenus{
+	background: rgba(235,122,127,1.00);
+	border-radius: 0px;
+	padding: 0 30px;
+}
+
+.menuitems{
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+	transition: color 0.3s;
+}
+
+.menuitems:hover{
+	color: var(--hover-color);
+}
+
+.lines1,.lines2,.lines3{
+	width: 23px;
+	height: 3px;
+	margin: 5px;
+	
+	transition: all 0.4s;
+}
+
+.changes .lines1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.changes .lines2{
+    opacity: 0;
+}
+.changes .lines3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.navbar-nav.color{
+	background-color: var(--navbar-color);
+}
+
+/*End Navbar*/
+
+/*Start Banners*/
+.banners{
+	width: 80%;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%,-50%);
+}
+
+.banners h1{
+	animation-name: myani1;
+	animation-duration: 2s;
+}
+
+.banners p{
+	animation-name: myani1;
+	animation-duration: 2s;
+	animation-delay: 0.5s;
+	animation-fill-mode: backwards;
+}
+
+.banners .bannerbtns{
+	transform: translateY(20px);
+
+	animation-name: myani2;
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-fill-mode: backwards;
+
+	transition: all 0.5s;
+}
+
+.bannerbtns:hover{
+	background-color: var(--hover-color);
+	color: #fff;
+}
+
+@keyframes myani1{
+	0%{
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+
+@keyframes myani2{
+	0%{
+		transform: translate(0) rotateX(90deg);
+	}
+
+	100%{
+		transform: translateY(20px) rotateX(0deg);
+	}
+}
+
+/*End Banners*/
+
+/*End Header Section*/
+
+
+/*Start About Us Section*/
+
+
+.aboutus{
+	background-color: var(--bg-color);
+	border-radius: 10px;
+}
+
+.readmorebtns{
+	border:1px solid var(--hover-color);
+
+	transition: all 0.5s;
+}
+
+.readmorebtns:hover{
+	background-color: var(--hover-color);
+	color: #fff;
+
+}
+
+.underlines{
+	width: 140px;
+	height: 5px;
+	margin: auto;
+
+	position: relative;
+}
+
+.underlines::before{
+	content: '';
+	width: 40%;
+	height: 100%;
+	background-color: var(--hover-color);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	border-radius: 50%;
+}
+
+.underlines::after{
+	content: '';
+	width: 40%;
+	height: 100%;
+	background-color: var(--hover-color);
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	border-radius: 50%;
+}
+
+.squares{
+	width: 20px;
+	height: 20px;
+	background-color: var(--hover-color);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.aboutusimgcontainers{
+	width: 400px;
+	height: 400px;
+}
+
+.aboutusimgcontainers img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.aboutustexts.fromlefts{
+	animation-name:myanifromleft;
+	animation-duration: 3s;
+}
+
+.aboutusimgcontainers.fromrights{
+	animation:myanifromright 3s;
+}
+
+@keyframes myanifromleft{
+	0%{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes myanifromright{
+	0%{
+		transform: translateX(120px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+
+
+/*End About Us Section*/
+
+
+/*Start Service Section*/
+.servicecontainers{
+	width: 280px;
+	height: 400px;
+	border-radius: 10px;
+
+	position: relative;
+
+	overflow: hidden;
+
+	/*opacity: 0;*/
+}
+
+.serviceimgcontainers{
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.serviceimgcontainers img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.text{
+	width: 100%;
+	height: 100%;
+
+	background:linear-gradient(
+		rgba(179,120,127,0.4),
+		rgba(0,0,0,0.4));
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.servicedetails{
+	height: 100%;
+	background-color: var(--navbar-color);
+	
+	position: absolute;
+	bottom: -100%;
+	left: 0;
+
+	transition: all 0.5s; 
+}
+
+.servicecontainers:hover .servicedetails{
+	bottom: 0;
+}
+
+.servicecontainers .btn:hover{
+	background-color: var(--hover-color);
+	color: #fff;
+}
+
+
+.servicecontainers.fromtops{
+	animation:myanifromtop 2s;
+	animation-fill-mode: backwards;
+}
+
+.servicecontainers.ones{
+	animation-delay: 0s;
+}
+
+.servicecontainers.twos{
+	animation-delay: 0.5s;
+}
+
+.servicecontainers.threes{
+	animation-delay: 1s;
+}
+
+.servicecontainers.fours{
+	animation-delay: 1.5s;
+}
+
+@keyframes myanifromtop{
+	0%{
+		transform: translateY(-80px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+
+/*End Service Section*/
+
+/*Start Customer Section*/
+.customers{
+	background-color: var(--bg-color);
+}
+
+/*End Customer Section*/
+
+/*Start Contact Us Section*/
+.contactcontainers{
+	border-radius: 10px;
+	/*box-shadow: 5px 5px 10px rgba(0,0,0,0.3);*/
+
+	margin:auto;
+
+	overflow: hidden;
+}
+
+i{
+	cursor: pointer;
+}
+
+.contactdetails i{
+	color: var(--hover-color);
+}
+
+.contactinfocontainers{
+	background-color: var(--bg-color);
+
+	position: relative;
+}
+
+.contactinfocontainers::before,
+.contactinfocontainers::after{
+	content: '\F075';
+    font-family: "Font Awesome 5 Free";
+    font-size: 7rem;
+    color: var(--hover-color);
+
+    position: absolute;
+    top: -20px;
+    left: 10px;
+
+    opacity: 0.2;
+}
+
+.contactinfocontainers::after{
+	position: absolute;
+	top: -30px;
+	left: 50px;
+
+	transform: rotateY(-180deg);
+}
+
+.contactformcontainers{
+	background-color: var(--navbar-color);
+
+	position: relative;
+}
+
+
+
+.contactformcontainers::before,
+.contactformcontainers::after{
+	content: '\F075';
+    font-family: "Font Awesome 5 Free";
+    font-size: 7rem;
+	color: #fff;
+
+	position: absolute;
+	bottom: -20px;
+	right: 10px;
+
+	opacity: 0.5;
+
+	transform: rotateY(-180deg);
+}
+
+.contactformcontainers::after{
+	position: absolute;
+	bottom: -30px;
+	right: 50px;
+
+	transform: rotateY(0);
+}
+
+.contactformcontainers input,.contactformcontainers textarea{
+	background-color: transparent;
+	border:2px solid #eee;
+}
+
+.contactformcontainers input{
+	border:none;
+	border-bottom: 2px solid #eee;
+}
+
+.contactformcontainers input::placeholder,.contactformcontainers textarea::placeholder{
+	color: #eee;
+	font-size: 14px;
+}
+
+.contactformcontainers input:focus,.contactformcontainers textarea:focus{
+	background-color: transparent;
+	border-color: var(--hover-color);
+	box-shadow: none;
+}
+
+.contactformcontainers button:hover{
+	background-color: var(--hover-color);
+	color: #fff;
+}
+
+.contactformcontainers.fromrights{
+	animation-name: myanifromright;
+	animation-duration: 3s;
+}
+
+.contactinfocontainers.fromlefts{
+	animation-name: myanifromleft;
+	animation-duration: 3s;
+}
+
+.form-group{
+	position: relative;
+}
+
+.labels{
+    display: block;
+    font-size: 15px;
+ 	
+ 	position: absolute;
+ 	top: -4px;
+ 	left: 0px;
+
+ 	transition: all 0.5s;
+}
+
+.contactformcontainers input:placeholder-shown + .labels{
+	opacity: 0;
+	transform: translate(20px,20px);
+}
+
+.contactformcontainers textarea:placeholder-shown + .labels{
+	visibility: hidden;
+	transform: translate(20px,20px);
+}
+
+/*End Contact Us Section*/
+
+
+/*Start Footer Section*/
+.footers{
+	background-color: var(--bg-color);
+}
+
+.footers .titles{
+	color: var(--hover-color);
+	font-weight: bold;
+}
+
+.footerlinks{
+	text-decoration: none;
+	color: #555;
+}
+
+.footerlinks:hover{
+	color: var(--hover-color);
+}
+
+.borders{
+	border-top: 1px solid var(--hover-color);
+}
+
+/*End Footer Section*/
